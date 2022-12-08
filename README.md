@@ -24,10 +24,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 
 ### Random Joke
 ```bash
-# query on linux
+# linux
 http get localhost:5000/api/jokes/random
 
-# query on windows powershell
+# windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 
@@ -41,10 +41,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 ### List of Categories
 ```bash
-# query on linux
+# linux
 http get localhost:5000/api/jokes/categories
 
-# query on windows powershell
+# windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 ```
 
@@ -72,10 +72,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 
 ### Joke by ID
 ```bash
-# query on linux
+# linux
 http get localhost:5000/api/jokes/id/<id>
 
-# query on windows powershell
+# windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<id>
 
 ```
@@ -92,10 +92,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<id>
 
 ### Random Joke by Categories
 ```bash
-# query on linux
+# linux
 http post localhost:5000/api/jokes/<category>
 
-# query on windows powershell
+# windows
 Invoke-RestMethod -Method POST -Uri http://localhost:5000/api/jokes/<category>
 ```
 
@@ -115,10 +115,10 @@ Search have two parameters:
 - search=*{string}*
 - limit=*{number}*
 ```bash
-# query on linux
+# linux
 http --form post localhost:5000/api/jokes/filter search=test limit=3
 
-# query on windows powershell
+# windows
 Invoke-RestMethod -Method 'POST' -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="test"; limit="2"}
 ```
 
