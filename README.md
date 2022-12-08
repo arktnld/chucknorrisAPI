@@ -118,7 +118,7 @@ http --form post localhost:5000/api/jokes/filter search=test limit=3
 ```
 ### Joke by ID
 ```bash
-http post 127.0.0.1:5000/api/jokes/id/lx5mMleKQ_OjYAN6ZU3BNw
+http post localhost:5000/api/jokes/id/lx5mMleKQ_OjYAN6ZU3BNw
 ```
 
 #### Output:
