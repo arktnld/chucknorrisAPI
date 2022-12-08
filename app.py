@@ -101,7 +101,7 @@ def by_category(category):
 # Joke by ID
 @app.route('/api/jokes/id/<string:id>', methods=methods)
 def by_id(id):
-    if request.method == 'POST':
+    if request.method == 'GET':
         url = root_url + id
         res = requests.get(url, headers=headers).json()
         if res.get('value'):
