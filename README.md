@@ -36,7 +36,7 @@ http get localhost:5000/api/jokes/random
 ```
 ### List of Categories
 ```bash
-http get 127.0.0.1:5000/api/jokes/categories
+http get localhost:5000/api/jokes/categories
 ```
 
 #### Output:
