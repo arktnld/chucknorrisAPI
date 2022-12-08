@@ -13,8 +13,10 @@ pip install -r requirements.txt
 # run the server
 flask run
 
-# query the api
-http get localhost:5000/api/jokes/random # linux
+# query the API on linux
+http get localhost:5000/api/jokes/random
+
+# query on windows
 Invoke-RestMethod -Method 'Post' -Uri localhost:5000/api/jokes/random # Windows powershell
 ```
 ## GET
