@@ -7,6 +7,9 @@ Simple api to show jokes about Chuck Norris.
 # enter the project
 cd chucknorrisAPI
 
+# install requirements from file
+pip install -r requirements.txt
+
 # run the server
 flask run
 
