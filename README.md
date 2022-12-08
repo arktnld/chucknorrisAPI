@@ -88,15 +88,14 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
     "joke": "God offered Chuck Norris the gift to fly, which he swiftly declined for super strength roundhouse ability."
 }
 ```
-## POST
 
 ### Random Joke by Categories
 ```bash
 # linux
-http post localhost:5000/api/jokes/<category>
+http get localhost:5000/api/jokes/<category>
 
 # windows
-Invoke-RestMethod -Method POST -Uri http://localhost:5000/api/jokes/<category>
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<category>
 ```
 
 #### Output:
@@ -109,6 +108,9 @@ Invoke-RestMethod -Method POST -Uri http://localhost:5000/api/jokes/<category>
     "joke": "Chuck Norris hosting is 101% uptime guaranteed."
 }
 ```
+
+## POST
+
 ### Search Joke With Limit
 
 Search have two parameters:
