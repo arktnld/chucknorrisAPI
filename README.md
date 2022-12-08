@@ -7,7 +7,7 @@ Simple API to show jokes about Chuck Norris.
 # enter the project
 cd chucknorrisAPI
 
-# install requirements from file
+# install requirements
 pip install -r requirements.txt
 
 # run the server
