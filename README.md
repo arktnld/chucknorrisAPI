@@ -1,3 +1,4 @@
+
 # chucknorrisAPI
 Simple API to show jokes about Chuck Norris.
 
@@ -13,17 +14,21 @@ pip install -r requirements.txt
 # run the server
 flask run
 
-# query the API on linux
+# query on linux
 http get localhost:5000/api/jokes/random
 
-# query the API on windows powershell
-Invoke-RestMethod -Uri localhost:5000/api/jokes/random
+# query on windows powershell
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 ## GET
 
 ### Random Joke
 ```bash
+# query on linux
 http get localhost:5000/api/jokes/random
+
+# query on windows powershell
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 
 #### Output:
@@ -36,7 +41,11 @@ http get localhost:5000/api/jokes/random
 ```
 ### List of Categories
 ```bash
+# query on linux
 http get localhost:5000/api/jokes/categories
+
+# query on windows powershell
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 ```
 
 #### Output:
@@ -61,11 +70,33 @@ http get localhost:5000/api/jokes/categories
 ]
 ```
 
+### Joke by ID
+```bash
+# query on linux
+http get localhost:5000/api/jokes/id/lx5mMleKQ_OjYAN6ZU3BNw
+
+# query on windows powershell
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<id>
+
+```
+
+#### Output:
+```bash
+{
+    "categories": [],
+    "id": "lx5mMleKQ_OjYAN6ZU3BNw",
+    "joke": "God offered Chuck Norris the gift to fly, which he swiftly declined for super strength roundhouse ability."
+}
+```
 ## POST
 
 ### Random Joke by Categories
 ```bash
+# query on linux
 http post localhost:5000/api/jokes/<category>
+
+# query on windows powershell
+Invoke-RestMethod -Method POST -Uri http://localhost:5000/api/jokes/<category>
 ```
 
 #### Output:
@@ -84,7 +115,11 @@ Search have two parameters:
 - search=*{string}*
 - limit=*{number}*
 ```bash
+# query on linux
 http --form post localhost:5000/api/jokes/filter search=test limit=3
+
+# query on windows powershell
+Invoke-RestMethod -Method 'POST' -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="test"; limit="2"}
 ```
 
 #### Output:
@@ -114,19 +149,6 @@ http --form post localhost:5000/api/jokes/filter search=test limit=3
         }
     ],
     "total": "3"
-}
-```
-### Joke by ID
-```bash
-http post localhost:5000/api/jokes/id/lx5mMleKQ_OjYAN6ZU3BNw
-```
-
-#### Output:
-```bash
-{
-    "categories": [],
-    "id": "lx5mMleKQ_OjYAN6ZU3BNw",
-    "joke": "God offered Chuck Norris the gift to fly, which he swiftly declined for super strength roundhouse ability."
 }
 ```
 ## TODO
