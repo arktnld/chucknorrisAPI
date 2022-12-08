@@ -73,10 +73,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 ### Joke by ID
 ```bash
 # linux
-http get localhost:5000/api/jokes/<id>
+http get localhost:5000/api/jokes/id/<id>
 
 # windows
-Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<id>
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
 
 ```
 
