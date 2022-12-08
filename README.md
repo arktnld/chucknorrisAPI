@@ -73,7 +73,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 ### Joke by ID
 ```bash
 # query on linux
-http get localhost:5000/api/jokes/id/lx5mMleKQ_OjYAN6ZU3BNw
+http get localhost:5000/api/jokes/id/<id>
 
 # query on windows powershell
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<id>
