@@ -16,7 +16,7 @@ flask run
 # query the API on linux
 http get localhost:5000/api/jokes/random
 
-# query the API on windows
+# query the API on windows powershell
 Invoke-RestMethod -Uri localhost:5000/api/jokes/random
 ```
 ## GET
