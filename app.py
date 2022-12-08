@@ -88,7 +88,7 @@ def by_search():
 # Random joke by categories
 @app.route('/api/jokes/<string:category>', methods=methods)
 def by_category(category):
-    if request.method == 'POST':
+    if request.method == 'GET':
         if category in categories:
             url = root_url + "random?category=" + category
             res = requests.get(url, headers=headers).json()
