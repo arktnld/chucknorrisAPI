@@ -1,5 +1,5 @@
 # chucknorrisAPI
-Simple api to show jokes about Chuck Norris.
+Simple API to show jokes about Chuck Norris.
 
 ## TL;DR
 
