@@ -121,7 +121,7 @@ Search have two parameters:
 http --form post localhost:5000/api/jokes/filter search=computer limit=3
 
 # windows
-Invoke-RestMethod -Method POST -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="computer"; limit="3"}
+Invoke-RestMethod -Method POST -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="computer"; limit="3"} | Format-List
 ```
 
 #### Output:
