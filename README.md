@@ -15,7 +15,7 @@ pip install -r requirements.txt
 flask run
 
 # query on linux
-http get localhost:5000/api/jokes/random
+http localhost:5000/api/jokes/random
 
 # query on windows powershell
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
@@ -24,10 +24,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 
 ### Random Joke
 ```bash
-# linux
-http get localhost:5000/api/jokes/random
+# Linux
+http localhost:5000/api/jokes/random
 
-# windows
+# Windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 
@@ -41,10 +41,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 ```
 ### List of Categories
 ```bash
-# linux
-http get localhost:5000/api/jokes/categories
+# Linux
+http localhost:5000/api/jokes/categories
 
-# windows
+# Windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 ```
 
@@ -72,10 +72,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 
 ### Joke by ID
 ```bash
-# linux
-http get localhost:5000/api/jokes/id/<id>
+# Linux
+http localhost:5000/api/jokes/id/<id>
 
-# windows
+# Windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
 
 ```
@@ -91,10 +91,10 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
 
 ### Random Joke by Categories
 ```bash
-# linux
-http get localhost:5000/api/jokes/<category>
+# Linux
+http localhost:5000/api/jokes/<category>
 
-# windows
+# Windows
 Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<category>
 ```
 
