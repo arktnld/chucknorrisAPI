@@ -89,7 +89,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
 }
 ```
 
-### Random Joke by Categories
+### Random Joke by Category
 ```bash
 # Linux
 http localhost:5000/api/jokes/<category>
