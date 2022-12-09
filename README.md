@@ -118,10 +118,10 @@ Search have two parameters:
 - limit=*{number}*
 ```bash
 # linux
-http --form post localhost:5000/api/jokes/filter search=test limit=3
+http --form post localhost:5000/api/jokes/filter search=computer limit=3
 
 # windows
-Invoke-RestMethod -Method 'POST' -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="test"; limit="2"}
+Invoke-RestMethod -Method 'POST' -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="computer"; limit="3"}
 ```
 
 #### Output:
@@ -129,29 +129,24 @@ Invoke-RestMethod -Method 'POST' -Uri "http://localhost:5000/api/jokes/filter" -
 {
     "result": [
         {
-            "categories": [
-                "explicit"
-            ],
-            "id": "RX3L0rCGRc6pSCzghxzL3g",
-            "joke": "Horses have long faces because they keep challenging Chuck Norris to \"whos got the biggest dick\" contests."
+            "categories": [],
+            "id": "y-b7g8trr96pfmopdplf4g",
+            "joke": "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris."
         },
         {
-            "categories": [
-                "dev"
-            ],
-            "id": "7ver3y48qqsfktpelir7ua",
-            "joke": "Don't worry about tests, Chuck Norris's test cases cover your code too."
+            "categories": [],
+            "id": "AN7_hBUjSW-Fnbn-28jaVQ",
+            "joke": "When Chuck Norris wants cookies, he crashes open a computer."
         },
         {
-            "categories": [
-                "explicit"
-            ],
-            "id": "br0nodo6sl2q1u_i2s6uja",
-            "joke": "For some, the left testicle is larger than the right one. For Chuck Norris, each testicle is larger than the other one."
+            "categories": [],
+            "id": "mHaLxKzVRjiBLgE1KhEZ_g",
+            "joke": "Chuck Norris can build a computer with Windows 7."
         }
     ],
     "total": "3"
 }
+
 ```
 ## TODO
 
