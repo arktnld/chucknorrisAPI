@@ -18,7 +18,7 @@ flask run
 http localhost:5000/api/jokes/random
 
 # query on windows powershell
-Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random 
 ```
 ## GET
 
@@ -28,7 +28,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
 http localhost:5000/api/jokes/random
 
 # Windows
-Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/random | Format-List
 ```
 
 #### Output:
@@ -76,7 +76,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/categories
 http localhost:5000/api/jokes/id/<id>
 
 # Windows
-Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id> | Format-List
 
 ```
 
@@ -95,7 +95,7 @@ Invoke-RestMethod -Uri http://localhost:5000/api/jokes/id/<id>
 http localhost:5000/api/jokes/<category>
 
 # Windows
-Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<category>
+Invoke-RestMethod -Uri http://localhost:5000/api/jokes/<category> | Format-List
 ```
 
 #### Output:
@@ -121,7 +121,8 @@ Search have two parameters:
 http --form post localhost:5000/api/jokes/filter search=computer limit=3
 
 # Windows
-Invoke-RestMethod -Method POST -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="computer"; limit="3"} | Format-List
+Invoke-RestMethod -Method POST -Uri "http://localhost:5000/api/jokes/filter" -Body @{search="computer"; limit="3"} | ForEach-Object result | Format-List
+
 ```
 
 #### Output:
