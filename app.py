@@ -1,9 +1,11 @@
-from flask import Flask, jsonify, request
-import requests, json
+from flask import Flask, jsonify, request, render_template
+import requests, json, os
 
 # Create flask instance with the name
 # of the file application.
+__author__ = 'arktnld'
 app = Flask(__name__)
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 root_url = "https://api.chucknorris.io/jokes/"
 headers = { "Content-Type": "application/json" }
@@ -27,7 +29,8 @@ def get_json_items(data):
 def default():
     if request.method == 'GET': # Only accept GET method
         # Return json with status
-        return jsonify("This is a Chuck Norris Jokes API, have fun!"), 200
+        # return jsonify("This is a Chuck Norris Jokes API, have fun!"), 200
+        return render_template('index.html')
     else:
         # Other methods will throw a 405 error
         return jsonify(message="The method " + request.method + " is not allowed for the requested URL"), 405
@@ -88,7 +91,7 @@ def by_search():
 # Random joke by categories
 @app.route('/api/jokes/<string:category>', methods=methods)
 def by_category(category):
-    if request.method == 'GET':
+    if request.method == 'POST':
         if category in categories:
             url = root_url + "random?category=" + category
             res = requests.get(url, headers=headers).json()
@@ -101,7 +104,7 @@ def by_category(category):
 # Joke by ID
 @app.route('/api/jokes/id/<string:id>', methods=methods)
 def by_id(id):
-    if request.method == 'GET':
+    if request.method == 'POST':
         url = root_url + id
         res = requests.get(url, headers=headers).json()
         if res.get('value'):
@@ -110,3 +113,6 @@ def by_id(id):
             return jsonify(message="The id '" + id + "' was not found"), 404
     else:
         return jsonify(message="The method " + request.method + " is not allowed for the requested URL"), 405
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
